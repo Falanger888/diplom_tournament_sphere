@@ -1,0 +1,124 @@
+@font-face {
+    font-family: 'Montserrat Alternates';
+    src: url('../fonts/MontserratAlternates-Regular.ttf') format('truetype');
+}
+
+body.auth-page {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 200;
+    background-image: url('../img/фон_регистрация.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    color: white;
+    margin: 0;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 700px;
+    background-color: rgba(190, 194, 200, 0.5);
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth-card h1 {
+    font-size: 36px;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.auth-card form { width: 100%; }
+
+.auth-card .form-group { margin-bottom: 16px; }
+.auth-card .form-group label {
+    display: block;
+    color: white;
+    font-size: 22px;
+    font-weight: 100;
+    margin-bottom: 8px;
+}
+
+.auth-card .input {
+    width: 100%;
+    padding: 16px 24px;
+    background-color: rgba(217, 217, 217, 0.9);
+    border: 0;
+    border-radius: 21px;
+    color: var(--text, #fff);
+    font-size: 20px;
+    font-family: inherit;
+    outline: none;
+}
+.auth-card .input::placeholder { color: rgba(255, 255, 255, 0.8); }
+.auth-card .input:focus { background-color: rgba(217, 217, 217, 1); }
+
+.auth-card .btn,
+.auth-card button[type="submit"] {
+    display: block;
+    width: 250px;
+    margin: 30px auto 0;
+    padding: 18px;
+    border: 0;
+    border-radius: 18px;
+    background-color: rgba(217, 217, 217, 0.4);
+    color: white;
+    font-size: 24px;
+    font-weight: 300;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.auth-card .btn:hover,
+.auth-card button[type="submit"]:hover {
+    background-color: rgba(190, 194, 200, 0.7);
+}
+
+.auth-card p.text-muted {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+.auth-card p.text-muted a {
+    color: rgba(129, 48, 54, 1);
+    transition: 0.5s;
+}
+.auth-card p.text-muted a:hover { color: rgba(156, 83, 88, 1); }
+
+.auth-card .error-msg {
+    color: #ffbbbb;
+    text-align: center;
+    margin-top: 12px;
+    font-size: 15px;
+}
+
+.auth-logo {
+    display: block;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-align: center;
+    margin-bottom: 24px;
+}
+.auth-logo:hover { color: white; }
+
+@media (max-width: 600px) {
+    .auth-card { padding: 24px 18px; }
+    .auth-card h1 { font-size: 24px; }
+    .auth-card .form-group label { font-size: 18px; }
+    .auth-card .input { padding: 12px 18px; font-size: 16px; }
+    .auth-card .btn,
+    .auth-card button[type="submit"] { font-size: 18px; padding: 12px; }
+}
